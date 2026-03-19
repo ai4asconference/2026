@@ -1,7 +1,7 @@
 :root {
   --holo-blue: #5da9e9;
-  --ancient-clay: #b8926a;
-  --aged-parchment: #e8d5b5;
+  --ancient-clay: #4a3427;
+  --aged-parchment: #5da9e9;
   --study-wood: #4a3427;
   --slate-gray: #3c4146;
   --page-bg: var(--aged-parchment);
@@ -64,7 +64,7 @@ body {
 .brand-sub {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--ancient-clay);
+  color: var(--holo-blue);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -99,6 +99,15 @@ body {
 
 .menu a.active {
   border-bottom-color: var(--link);
+}
+
+a,
+a:visited {
+  color: #5da9e9;
+}
+
+a:hover {
+  color: #5da9e9;
 }
 
 .hero {
@@ -215,7 +224,7 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 0.9rem;
-  background: #f7ead5;
+  background: #ffffff;
 }
 
 .member h3 {
@@ -306,7 +315,7 @@ h2 {
 .agenda-tag {
   font-weight: 800;
   letter-spacing: 0.02em;
-  color: var(--holo-blue);
+  color: var(--ancient-clay);
 }
 
 .agenda-detail {
