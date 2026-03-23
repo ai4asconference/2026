@@ -81,6 +81,19 @@ body {
   display: block;
 }
 
+.labex-logo {
+  height: 62px;
+  width: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.cnr-logo {
+  height: 62px;
+  width: auto;
+  display: block;
+}
+
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -338,6 +351,14 @@ h2 {
   }
 
   .dh2026-logo {
+    height: 54px;
+  }
+
+  .labex-logo {
+    height: 54px;
+  }
+
+  .cnr-logo {
     height: 54px;
   }
 
