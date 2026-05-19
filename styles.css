@@ -338,6 +338,33 @@ h2 {
   line-height: 1.42;
 }
 
+.abstracts-intro {
+  margin: 0 0 1.4rem;
+  color: var(--slate-gray);
+}
+
+.abstract-session + .abstract-session {
+  margin-top: 1.8rem;
+}
+
+.abstract-simple-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.abstract-simple-list li + li {
+  margin-top: 0.7rem;
+}
+
+.abstract-authors {
+  font-weight: 700;
+  color: var(--study-wood);
+}
+
+.abstract-title-inline {
+  color: var(--ink);
+}
+
 @media (max-width: 980px) {
   .topbar-inner {
     align-items: flex-start;
