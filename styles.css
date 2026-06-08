@@ -99,6 +99,7 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 1.1rem;
+  align-items: center;
 }
 
 .menu a {
@@ -112,6 +113,54 @@ body {
 
 .menu a.active {
   border-bottom-color: var(--link);
+}
+
+.menu-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 0.45rem;
+  margin-bottom: -0.45rem;
+}
+
+.menu-parent {
+  display: inline-block;
+}
+
+.menu-dropdown.active-parent .menu-parent {
+  border-bottom-color: var(--link);
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 12.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.45rem;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(60, 65, 70, 0.12);
+  z-index: 20;
+}
+
+.submenu a {
+  padding: 0.35rem 0.45rem;
+  border-bottom: 0;
+  white-space: nowrap;
+}
+
+.submenu a.active {
+  background: rgba(93, 169, 233, 0.12);
+  border-radius: 6px;
+}
+
+.menu-dropdown:hover .submenu,
+.menu-dropdown:focus-within .submenu {
+  display: flex;
 }
 
 a,
@@ -338,6 +387,50 @@ h2 {
   line-height: 1.42;
 }
 
+.keynote-page h3 {
+  margin: 1.4rem 0 0.55rem;
+  font-size: 1.18rem;
+  color: var(--ancient-clay);
+}
+
+.keynote-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(240px, 0.9fr);
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.keynote-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--holo-blue);
+}
+
+.keynote-speaker {
+  margin: 0.2rem 0 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.keynote-affiliation {
+  margin: 0.2rem 0 1rem;
+  color: var(--slate-gray);
+}
+
+.keynote-copy p {
+  line-height: 1.65;
+}
+
+.keynote-media img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
 .abstracts-intro {
   margin: 0 0 1.4rem;
   color: var(--slate-gray);
@@ -393,6 +486,11 @@ h2 {
     justify-content: flex-start;
     gap: 0.8rem 1rem;
   }
+
+  .submenu {
+    left: auto;
+    right: 0;
+  }
 }
 
 @media (max-width: 700px) {
@@ -413,6 +511,10 @@ h2 {
   }
 
   .committee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .keynote-layout {
     grid-template-columns: 1fr;
   }
 
